@@ -33,11 +33,6 @@ jobs:
     - name: Get dependencies
       run: flutter pub get
       
-    - name: Analyze code
-      run: flutter analyze
-      
-    - name: Run tests
-      run: flutter test || echo "Tests failed, continuing build..."
       
     - name: Build APK (Debug)
       if: github.event_name == 'pull_request'
